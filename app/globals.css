@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-cyan-500 text-black font-medium rounded-lg
+    hover:bg-cyan-400 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-gray-800 text-white font-medium rounded-lg
+    hover:bg-gray-700 transition-colors duration-200 border border-gray-700;
+  }
+
+  .section {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+  }
+
+  /* 제목 스타일 */
+  .heading-1 {
+    @apply text-4xl sm:text-5xl font-bold mb-6;
+  }
+
+  .heading-2 {
+    @apply text-3xl sm:text-4xl font-bold mb-8;
+  }
+
+  .heading-3 {
+    @apply text-2xl sm:text-3xl font-bold mb-4;
+  }
 }
