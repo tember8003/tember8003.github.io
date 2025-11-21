@@ -66,6 +66,20 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentProjects.map((project) => (
+          <Link
+            key={project.id}
+            href={`/projects/${project.id}`}
+            className="group bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:horder-cyan-500 transition-all duration-300 hover:scale-[1,02]"
+          >
+            <div className="aspect-video bg-linear-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+              <p className="text-gray-600 text-sm">Image</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
