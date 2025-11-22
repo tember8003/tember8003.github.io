@@ -9,7 +9,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="section pt-32 pb-20">
         <div className="max-w-4xl">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-linear-to-b from-white to-gray-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
             Hello!
             <br />
             I'm Computer Science Student
@@ -78,7 +78,7 @@ export default function Home() {
               className="group bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-cyan-500 transition-all duration-300 hover:scale-[1.02]"
             >
               {/* 프로젝트 이미지 placeholder */}
-              <div className="aspect-video bg-linear-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                 <p className="text-gray-600 text-sm">Image</p>
               </div>
 
@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="section py-20 text-center">
-        <div className="max-w-3xl mx-auto bg-linear-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12">
+        <div className="max-w-3xl mx-auto bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12">
           <h2 className="heading-2 mb-4">Contact!</h2>
           <p className="text-gray-400 mb-8 text-lg">
             I welcome the opportunity to actively engage in new projects and
