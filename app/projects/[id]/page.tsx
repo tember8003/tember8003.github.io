@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects, getProjectById } from "@/lib/data";
+import Image from "next/image";
 
 // 동적 라우트를 위한 params 생성
 export async function generateStaticParams() {
@@ -97,12 +98,24 @@ export default async function ProjectDetailPage({
         </div>
       </section>
 
-      {/* Project Image */}
       <section className="section py-12">
         <div className="max-w-4xl">
-          <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-800 flex items-center justify-center">
-            <p className="text-gray-600">Project Image Placeholder</p>
-          </div>
+          {project.image ? (
+            <div className="relative aspect-video bg-gray-800 rounded-xl border border-gray-800 overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 1024px"
+              />
+            </div>
+          ) : (
+            <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-800 flex items-center justify-center">
+              <p className="text-gray-600">Project Image Placeholder</p>
+            </div>
+          )}
         </div>
       </section>
 
