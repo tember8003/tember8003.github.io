@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/lib/data";
 
 export default function Home() {
@@ -69,7 +70,6 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* 프로젝트 카드 그리드 - section 안으로 이동! */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {recentProjects.map((project) => (
             <Link
@@ -77,10 +77,22 @@ export default function Home() {
               href={`/projects/${project.id}`}
               className="group bg-gray-900 border border-gray-800 rounded-lg overflow-hidden hover:border-cyan-500 transition-all duration-300 hover:scale-[1.02]"
             >
-              {/* 프로젝트 이미지 placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                <p className="text-gray-600 text-sm">Image</p>
-              </div>
+              {/* 이미지 부분 - 조건부 렌더링 */}
+              {project.image ? (
+                <div className="relative aspect-video bg-gray-800 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+              ) : (
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                  <p className="text-gray-600 text-sm">Image</p>
+                </div>
+              )}
 
               <div className="p-6">
                 {/* 프로젝트 타입 뱃지 */}
