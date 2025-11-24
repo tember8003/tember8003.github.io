@@ -85,10 +85,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:yuchan8003@naver.com"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
-                    your.email@example.com
+                    yuchan8003@naver.com
                   </a>
                 </div>
               </div>
@@ -107,12 +107,12 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold mb-1">GitHub</h3>
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/tember8003"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
-                    github.com/yourusername
+                    github.com/tember8003
                   </a>
                 </div>
               </div>
@@ -127,17 +127,6 @@ export default function ContactPage() {
                   >
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                   </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">LinkedIn</h3>
-                  <a
-                    href="https://linkedin.com/in/yourusername"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors"
-                  >
-                    linkedin.com/in/yourusername
-                  </a>
                 </div>
               </div>
 
@@ -166,7 +155,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Location</h3>
-                  <p className="text-gray-400">Seoul, South Korea</p>
+                  <p className="text-gray-400">South Korea</p>
                 </div>
               </div>
             </div>
